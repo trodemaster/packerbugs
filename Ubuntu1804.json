@@ -20,6 +20,7 @@
       "headless": true,
       "vnc_port_min": "5910",
       "vnc_port_max": "5910",
+      "http_directory": "http",
       "ssh_username": "ubuntu",
       "ssh_password": "P@SSword!",
       "disk_size": "10240",
@@ -27,7 +28,7 @@
       "disk_cache": "unsafe",
       "net_device": "virtio-net",
       "vm_name": "Ubuntu1804.qcow2",
-      "boot_wait": "8s",
+      "boot_wait": "5s",
       "ssh_wait_timeout": "2h",
       "boot_command": [
         "<enter><wait><f6><esc>",
