@@ -27,7 +27,7 @@
       "disk_cache": "unsafe",
       "net_device": "virtio-net",
       "vm_name": "Ubuntu1804.qcow2",
-      "boot_wait": "15s",
+      "boot_wait": "8s",
       "ssh_wait_timeout": "2h",
       "boot_command": [
         "<enter><wait><f6><esc>",
