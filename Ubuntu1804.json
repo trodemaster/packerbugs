@@ -1,0 +1,57 @@
+{
+  "builders": [
+    {
+      "type": "qemu",
+      "output_directory": "VM/Ubuntu1804-qemu",
+      "accelerator": "kvm",
+      "iso_url": "ISO/ubuntu-18.04-server-amd64.iso",
+      "iso_checksum": "a7f5c7b0cdd0e9560d78f1e47660e066353bb8a79eb78d1fc3f4ea62a07e6cbc",
+      "iso_checksum_type": "sha256",
+      "qemuargs": [
+        [
+          "-m",
+          "4096"
+        ],
+        [
+          "-smp",
+          "2"
+        ]
+      ],
+      "headless": true,
+      "ssh_username": "ubuntu",
+      "disk_size": "10240",
+      "disk_interface": "virtio-scsi",
+      "disk_cache": "unsafe",
+      "net_device": "virtio-net",
+      "vm_name": "Ubuntu1804.qcow2",
+      "boot_wait": "15s",
+      "ssh_wait_timeout": "2h",
+      "boot_command": [
+        "<enter><wait><f6><esc>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs>",
+        "/install/vmlinuz auto ",
+        "file=/cdrom/preseed/ubuntu-server-minimal.seed",
+        "debian-installer=en_US locale=en_US kbd-chooser/method=us ",
+        "netcfg/get_hostname=Ubuntu1804",
+        "keyboard-configuration/modelcode=SKIP ",
+        "keyboard-configuration/layout=USA keyboard-configuration/variant=USA ",
+        "priority=critical ",
+        "initrd=/install/initrd.gz -- ",
+        "<enter>"
+      ],
+      "shutdown_command": "sudo shutdown -P now"
+    }
+  ] 
+}
+
+
+
+  
