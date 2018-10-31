@@ -56,7 +56,7 @@
   "provisioners": [
     {
       "type": "shell-local",
-      "command": ""
+      "command": "ls logs/packer-build.log"
     }
   ]
 }
