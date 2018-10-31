@@ -21,6 +21,7 @@
       "vnc_port_min": "5910",
       "vnc_port_max": "5910",
       "ssh_username": "ubuntu",
+      "ssh_password": "P@SSword!",
       "disk_size": "10240",
       "disk_interface": "virtio-scsi",
       "disk_cache": "unsafe",
@@ -40,7 +41,7 @@
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
         "<bs><bs>",
         "/install/vmlinuz auto ",
-        "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed-vmw.cfg ",
+        "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed-qemu.cfg ",
         "debian-installer=en_US locale=en_US kbd-chooser/method=us ",
         "netcfg/get_hostname=Ubuntu1804",
         "keyboard-configuration/modelcode=SKIP ",
@@ -51,9 +52,11 @@
       ],
       "shutdown_command": "sudo shutdown -P now"
     }
-  ] 
+  ],
+  "provisioners": [
+    {
+      "type": "shell-local",
+      "command": ""
+    }
+  }
 }
-
-
-
-  
