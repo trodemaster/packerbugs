@@ -18,6 +18,8 @@
         ]
       ],
       "headless": true,
+      "vnc_port_min": "5910",
+      "vnc_port_max": "5910",
       "ssh_username": "ubuntu",
       "disk_size": "10240",
       "disk_interface": "virtio-scsi",
