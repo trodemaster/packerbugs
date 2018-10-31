@@ -3,7 +3,7 @@
     {
       "name": "qemu-new",
       "type": "qemu",
-      "output_directory": "VM/Ubuntu1804-qemu",
+      "output_directory": "VM/Ubuntu1804-qemu-new",
       "accelerator": "kvm",
       "iso_url": "ISO/ubuntu-18.04-server-amd64.iso",
       "iso_checksum_type": "none",
@@ -62,7 +62,7 @@
     {
       "name": "qemu-legacy",
       "type": "qemu",
-      "output_directory": "VM/Ubuntu1804-qemu",
+      "output_directory": "VM/Ubuntu1804-qemu-legacy",
       "accelerator": "kvm",
       "iso_url": "ISO/ubuntu-18.04-server-amd64.iso",
       "iso_checksum_type": "none",
