@@ -1,6 +1,7 @@
 {
   "builders": [
     {
+      "name": "qemu-new",
       "type": "qemu",
       "output_directory": "VM/Ubuntu1804-qemu",
       "accelerator": "kvm",
@@ -35,7 +36,62 @@
       "net_device": "virtio-net",
       "vm_name": "Ubuntu1804.qcow2",
       "boot_wait": "5s",
-      "ssh_wait_timeout": "2h",
+      "boot_command": [
+        "<enter><wait><f6><esc>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
+        "<bs><bs>",
+        "/install/vmlinuz auto ",
+        "url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed-qemu.cfg ",
+        "debian-installer=en_US locale=en_US kbd-chooser/method=us ",
+        "netcfg/get_hostname=Ubuntu1804",
+        "keyboard-configuration/modelcode=SKIP ",
+        "keyboard-configuration/layout=USA keyboard-configuration/variant=USA ",
+        "priority=critical ",
+        "initrd=/install/initrd.gz -- ",
+        "<enter>"
+      ],
+      "shutdown_command": "sudo shutdown -P now"
+    },
+    {
+      "name": "qemu-legacy",
+      "type": "qemu",
+      "output_directory": "VM/Ubuntu1804-qemu",
+      "accelerator": "kvm",
+      "iso_url": "ISO/ubuntu-18.04-server-amd64.iso",
+      "iso_checksum_type": "none",
+      "qemuargs": [
+        [
+          "-m",
+          "1024"
+        ],
+        [
+          "-smp",
+          "2"
+        ],
+        [
+          "-usbdevice",
+          "tablet"
+        ]
+      ],
+      "headless": true,
+      "vnc_port_min": "5911",
+      "vnc_port_max": "5911",
+      "http_directory": "http",
+      "ssh_username": "ubuntu",
+      "ssh_password": "P@SSword!",
+      "disk_size": "1024",
+      "disk_interface": "virtio-scsi",
+      "disk_cache": "unsafe",
+      "net_device": "virtio-net",
+      "vm_name": "Ubuntu1804.qcow2",
+      "boot_wait": "5s",
       "boot_command": [
         "<enter><wait><f6><esc>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
