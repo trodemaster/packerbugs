@@ -38,7 +38,7 @@
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
         "<bs><bs>",
         "/install/vmlinuz auto ",
-        "file=/cdrom/preseed/ubuntu-server-minimal.seed",
+        "file=/cdrom/preseed/ubuntu-server-minimal.seed ",
         "debian-installer=en_US locale=en_US kbd-chooser/method=us ",
         "netcfg/get_hostname=Ubuntu1804",
         "keyboard-configuration/modelcode=SKIP ",
