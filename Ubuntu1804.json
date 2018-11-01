@@ -36,6 +36,7 @@
       "net_device": "virtio-net",
       "vm_name": "Ubuntu1804.qcow2",
       "boot_wait": "5s",
+      "ssh_wait_timeout": "2h",
       "boot_command": [
         "<enter><wait><f6><esc>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
@@ -92,6 +93,7 @@
       "net_device": "virtio-net",
       "vm_name": "Ubuntu1804.qcow2",
       "boot_wait": "5s",
+      "ssh_wait_timeout": "2h",
       "boot_command": [
         "<enter><wait><f6><esc>",
         "<bs><bs><bs><bs><bs><bs><bs><bs><bs><bs>",
