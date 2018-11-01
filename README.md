@@ -1,5 +1,5 @@
 # packerbugs
-To reproduce the issue https://github.com/hashicorp/packer/issues/6947 see below
+#alt-h1 To reproduce the issue https://github.com/hashicorp/packer/issues/6947 see below
 
 This packer template has two nearly identical builders. 
 *qemu-legacy* uses the qemu args "-usbdevice tablet" which works on 2.x qemu but has issues on 3.x
