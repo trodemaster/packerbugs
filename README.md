@@ -23,7 +23,6 @@ Qemu stderr: qemu-system-x86_64: -usbdevice tablet: '-usbdevice' is deprecated, 
 
 Build the new version
 packer build -force -only qemu-legacy Ubuntu1804.json
-Full log here https://git.corp.adobe.com/gist/bgarner/d62af3c7789937e56bfb982dd5567ad1
 
 This is what the qemu string looks like for qemu-new. Note scsi devices are missing and this build will fail because the scsi devices are missing from the VM.
 
