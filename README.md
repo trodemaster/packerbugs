@@ -11,5 +11,12 @@ source ./envvars.sh
 Build the legacy version
 packer build -force -only qemu-legacy Ubuntu1804.json
 
+This is what the qemu string looks like for qemu-legacy
 
-More details pending... 
+
+Build the new version
+packer build -force -only qemu-legacy Ubuntu1804.json
+
+This is what the qemu string looks like for qemu-legacy
+
+
