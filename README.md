@@ -8,8 +8,10 @@
 source ./envvars.sh
 
 ## Both templates need the following options in addition to the usb tablet device configured. 
-```"disk_interface": "virtio-scsi"
-"net_device": "virtio-net"```
+```
+"disk_interface": "virtio-scsi"
+"net_device": "virtio-net"
+```
 
 ## Build the legacy version
 `packer build -force -only qemu-legacy Ubuntu1804.json`
